@@ -14,5 +14,5 @@ Package.on_use(function (api) {
   api.add_files([
     'prettify.js',
     'prettify.css',
-    'styles/sunburst.css'], "client");
+    path.join('styles', 'sunburst.css')], "client");
 });

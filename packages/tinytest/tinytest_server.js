@@ -15,7 +15,7 @@ Meteor.methods({
     this.unblock();
 
     // XXX using private API === lame
-    var Future = __meteor_bootstrap__.require('fibers/future');
+    var Future = __meteor_bootstrap__.require(path.join('fibers', 'future'));
     var future = new Future;
 
     var onReport = function (report) {
