@@ -1,3 +1,5 @@
+var path = require('path');
+
 Package.describe({
   summary: "UX/UI framework from Twitter"
 });
