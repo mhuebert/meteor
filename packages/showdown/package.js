@@ -9,7 +9,7 @@ Package.describe({
 });
 
 // XXX hack -- need a way to use a package at bundle time
-var _ = require(path.join(__dirname, '..', '..', 'packages', 'underscore', 'underscore.js'));
+var _ = require(path.join('..', '..', 'packages', 'underscore', 'underscore.js'));
 
 Package.on_use(function (api, where) {
   where = where || ["client", "server"];

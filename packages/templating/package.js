@@ -89,7 +89,7 @@ Package.on_test(function (api) {
     'templating_tests.html'
   ], 'client');
   api.add_files([
-    path.join(__dirname, '..', 'handlebars', 'parse.js'), // XXX hacky
+    path.join('..', 'handlebars', 'parse.js'), // XXX hacky
     'html_scanner.js',
     'scanner_tests.js'
   ], 'server');

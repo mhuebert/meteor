@@ -26,7 +26,6 @@ Handlebars = {};
  * partial.)
  */
 
-var path = require('path');
 
 Handlebars.to_json_ast = function (code) {
   // We need handlebars and underscore, but this is bundle time, so
@@ -36,6 +35,8 @@ Handlebars.to_json_ast = function (code) {
   // This is all very hacky.
   var req = (typeof require === 'undefined' ?
              __meteor_bootstrap__.require : require);
+  var path = req('path');
+
   var _ = global._;
   if (! _)
     _ = req(path.join('..', '..', 'packages', 'underscore', 'underscore.js')); // XXX super lame
