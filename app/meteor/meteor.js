@@ -36,7 +36,8 @@ var require_project = function (cmd, accept_package) {
     return app_dir;
 
   var package_dir = files.find_upwards(function (p) {
-    echo p
+    process.stdout.write("in package_dir");
+    process.stdout.write(p);
     return files.is_package_dir(p) || files.is_package_collection_dir(p);
   });
   if (package_dir) {
