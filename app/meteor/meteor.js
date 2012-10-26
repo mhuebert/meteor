@@ -28,9 +28,6 @@ process.stdout.write(
 };
 
 var require_project = function (cmd, accept_package) {
-  process.stdout.write("Here are your two new vars to digest:");
-  process.stdout.write(cmd);
-  process.stdout.write(accept_package);
   var app_dir = files.find_upwards(files.is_app_dir);
   if (app_dir)
     return app_dir;
