@@ -28,11 +28,14 @@ process.stdout.write(
 };
 
 var require_project = function (cmd, accept_package) {
+  echo cmd
+  echo accept_package
   var app_dir = files.find_upwards(files.is_app_dir);
   if (app_dir)
     return app_dir;
 
   var package_dir = files.find_upwards(function (p) {
+    echo p
     return files.is_package_dir(p) || files.is_package_collection_dir(p);
   });
   if (package_dir) {
